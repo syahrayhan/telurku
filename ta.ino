@@ -1,17 +1,10 @@
 //**
-*   Copyright 2021 Rayhan Aswiansyah
+*   Copyright 2021 Rayhan Aswiansyah, Mikhel Swara Bahardi and Team
 *
-*   Licensed under the Apache License, Version 2.0 (the "License");
-*   you may not use this file except in compliance with the License.
-*   You may obtain a copy of the License at
-*
-*    http://www.apache.org/licenses/LICENSE-2.0
-*
-*  Unless required by applicable law or agreed to in writing, software
-*  distributed under the License is distributed on an "AS IS" BASIS,
-*  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-*  See the License for the specific language governing permissions and
-*  limitations under the License.
+*   Licensed under the MIT License
+*/
+// **
+*   Contact : syahrayhanid@gmail.com
 */
 #include <ESP8266WiFi.h>
 #include <FirebaseESP8266.h>
@@ -98,7 +91,7 @@ void setup()
 
     delay(10000);
     wifidynamic();
-    Firebase.begin("eggcubator-d446f-default-rtdb.firebaseio.com", "4KYOs3lhfrbQdWKqAu9P5JkMgTtn6nwUV1WqC07i");
+    Firebase.begin("host", "token");
     dht.begin();
     EEPROM.begin(512);
     addrsTemp = Firebase.getInt(firebaseData, "/EggData/maxTemp");
@@ -295,7 +288,6 @@ void loop()
                 }
                 else
                 {
-                    // Serial.println("alat hidup dan tidak direset");
                     previousTime = currentTime;
                 }
             }
