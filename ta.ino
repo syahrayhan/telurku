@@ -1,6 +1,7 @@
 //**
-*   Copyright 2021 Rayhan Aswiansyah, Mikhel Swara Bahardi and Team
-*
+*   Copyright 2021 syahrayhan
+*   author : 1. Rayhan Aswiansyah
+*            2. Mikhel Swara
 *   Licensed under the MIT License
 */
 // **
